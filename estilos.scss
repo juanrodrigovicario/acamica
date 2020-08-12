@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:rgb(243, 243, 233);
+    color: #62635a;
+}
+
+.contenedor{
+    width: 80%;
+    margin: 40px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav   nav    nav    nav"
+                         "main  main   main   aside"
+                         "wid   wid    wid    aside"
+                         "foot  foot   foot   foot";
+    .nav{
+        background-color: rgb(31, 31, 31);
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
+        color: rgb(216, 202, 202);
+        grid-area: nav;
+    }
+    .main{
+        background-color: #fff;
+        border-radius: 10px;
+        text-align: left;
+        padding: 50px;
+        grid-area: main;
+    }
+    .aside{
+        background-color: rgb(221, 221, 203);
+        border-radius: 10px;
+        padding: 50px;
+        grid-area: aside;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .widget{
+        background-color: rgb(198, 230, 243);
+        border-radius: 10px;
+        padding: 50px;
+        grid-area: wid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer{
+        background-color: rgb(58, 58, 58);
+        border-radius: 10px;
+        text-align: center;
+        padding: 50px;
+        grid-area: foot;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body {
+        background-color: rgb(37, 37, 37);
+    }
+    .contenedor {
+        grid-template-areas:    "nav   nav    nav    nav"
+                                "main  main   main   main"
+                                "aside aside  wid    wid"
+                                "foot  foot   foot   foot";
+    }
+}

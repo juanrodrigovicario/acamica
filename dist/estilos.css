@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f3e9;
+  color: #62635a;
+}
+
+.contenedor {
+  width: 80%;
+  margin: 40px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "nav   nav    nav    nav" "main  main   main   aside" "wid   wid    wid    aside" "foot  foot   foot   foot";
+}
+
+.contenedor .nav {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  color: #d8caca;
+  grid-area: nav;
+}
+
+.contenedor .main {
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: left;
+  padding: 50px;
+  grid-area: main;
+}
+
+.contenedor .aside {
+  background-color: #ddddcb;
+  border-radius: 10px;
+  padding: 50px;
+  grid-area: aside;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor .widget {
+  background-color: #c6e6f3;
+  border-radius: 10px;
+  padding: 50px;
+  grid-area: wid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor .footer {
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  text-align: center;
+  padding: 50px;
+  grid-area: foot;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #252525;
+  }
+  .contenedor {
+    grid-template-areas: "nav   nav    nav    nav" "main  main   main   main" "aside aside  wid    wid" "foot  foot   foot   foot";
+  }
+}
